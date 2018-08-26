@@ -6,60 +6,150 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/AdminPanel.css">
+	<script type="text/javascript" src="js/AdminPanel.js"></script>
 </head>
 <body>
-	<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Brand</a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-      <form class="navbar-form navbar-left">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+	<div class="container-fluid">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">		
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          KickStart
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Visit page</a>
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-      </form>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0 bg-">
+     <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
+      	<div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Notification
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#"><b>Message</b></a>
+        </div>
+      </div>
+      <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Prahar
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Log out</a>
+        </div>
+      </div>
+    </form>
+</div>
 </nav>
+<div class="col-md-3">
+	<div class="row">
+		<div class="vertical-menu">
+			<a href="#" class="new" data-toggle="modal" data-target="#myModal" onclick="myFun()">Dashboard
+  	<ul>
+  		<li>Tender List</li>
+  	</ul>
+  </a>
+   <!--The Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+      
+  <div class="modal-header">
+  	 <!-- The Modal -->
+  
+          <h4 class="modal-title">Tender List</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="container">
+		 <h2 style="text-align: center">Details</h2>
+		 <table class="table table-bordered position">
+      		<tr>
+        		<th>Form-no.</th>
+        		<td>hfhfhjghjgjjhjjhjhgh</td>
+      		</tr>
+      		<tr>
+        		<th>Department Name</th>
+        		<td>1</td>
+      		</tr>
+      		<tr>
+        		<th>Name of Work</th>
+        		<td>1</td>
+      		</tr>
+      		<tr>
+        		<th>Estimated contract value (INR)</th>
+        		<td>1</td>
+      		</tr>
+      		<tr>
+        		<th>Bidding Type</th>
+        		<td>1</td>
+      		</tr>
+      		<tr>
+        		<th>Tender Fee</th>
+        		<td>1</td>
+      		</tr>
+      		<tr>
+        		<th>Bid Security/EMD (INR)</th>
+        		<td>1</td>
+      		</tr>
+      		<tr>
+        		<th>Bid Document Downloading Start Date (INR)</th>
+        		<td>1</td>
+      		</tr>
+      		<tr>
+        		<th>Bid Document Downloading End Date (INR)</th>
+        		<td>1</td>
+      		</tr>
+      		<tr>
+        		<th>Pre Bid Meeting</th>
+        		<td>1</td>
+      		</tr>
+      		<tr>
+        		<th>Last Date & Time for Receipt of Bids</th>
+        		<td>1</td>
+      		</tr>
+      		<tr>
+        		<th>Submission of Documents</th>
+        		<td>1</td>
+      		</tr>
+      		<tr>
+        		<th>Bid Operating Date Technical Bid</th>
+        		<td>1</td>
+      		</tr>
+      		<tr>
+        		<th>Bid Operating Date Commercial Bid</th>
+        		<td>1</td>
+      		</tr>
+      	</table>
+    	
+</div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+</div>
+ 
+  			<a href="#" class="new">New
+  				<ul>
+  					<li>Tender</li>
+  					<li>Documents</li>
+  				</ul>
+  			</a>
+  			
+  
+    <a href="#" class="new">Edit Tender</a>
+</div>
+
+</div>
+</div>
 </body>
 </html>
