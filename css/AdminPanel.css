@@ -1,5 +1,8 @@
 .vertical-menu {
-    width: 300px;
+    width: 15%;
+    height:100vh;
+    position: fixed;
+    top:8%;
 }
 
 .new {
@@ -13,8 +16,22 @@
 .vertical-menu a:hover {
     background-color:#141111;
     color:#0099ff;
+
 }
 .hidden
 {
         display: none;
+}
+section{
+    height: 128vh;
+    margin-left: 15%;
+    /*margin-top: 10%;*/
+    background-color: #d3d3d3;
+}
+ul{
+    list-style: none;
+}
+
+.vertical-menu li a{
+    color: #d3d3d3!important;
 }

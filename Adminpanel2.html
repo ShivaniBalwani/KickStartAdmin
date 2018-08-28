@@ -5,151 +5,239 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/AdminPanel.css">
+	<link rel="stylesheet" type="text/css" href="css/font/css/font-awesome.min.css">
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/AdminPanel.js"></script>
 </head>
 <body>
-	<div class="container-fluid">
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">		
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          KickStart
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Visit page</a>
-        </div>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0 bg-">
-     <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>-->
-      	<div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Notification
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#"><b>Message</b></a>
-        </div>
+	<ul class="nav flex-column vertical-menu navbar-dark bg-dark" style="top:0%">
+		<li class="nav-item dropdown active">
+        	<a class="nav-link"  data-target="#hii" role="button" data-toggle="collapse" >
+         	Dashboard
+        	</a>
+       		<ul>
+       			<li id="hii">
+          			<a class="dropdown-item active" href="#1"r>Tender List</a>
+        		</li>
+    		</ul>
+      	</li>
+   		<li class="nav-item dropdown">
+        	<a class="nav-link dropdown-toggle" data-target="#hello" role="button" data-toggle="collapse">
+         	New
+        	</a>
+        	<ul>
+        		<li id="hello">
+          		<a class="dropdown-item" href="#">Tender</a>
+          		<a class="dropdown-item" href="#">Documents</a>
+        		</li>
+        	</ul>
+      	</li>
+      	<li class="nav-item dropdown">
+        	<a class="nav-link dropdown-toggle" data-target="#hi" role="button" data-toggle="collapse">
+         	Edit
+        	</a>
+        	<ul>
+        		<li id="hi">
+          		<a class="dropdown-item" href="#3">Tender</a>
+    			 </li>
+    		</ul>
+      	</li>
+   </ul>
+  	<section id="1">
+  		<div class="container" style="padding-top: 5%;">
+  			<div class="container">
+		 		<h2 class="position" style="text-align: center;">Details</h2>
+		 		<table class="table table-bordered"> 
+    				<thead class="position" style="text-align: center;">
+      					<tr>
+        					<th>Form no</th>
+        					<th>Department name</th>
+       						<th>Last Date & Time for Receipt of Bids</th>
+            				<th>Action</th>
+      					</tr>
+    				</thead>
+    				<tbody class="position" style="text-align: center">
+      					<tr>
+        					<td>1</td>
+        					<td>abc</td>
+        					<td>18/8/18</td>
+        					<td>
+        						<a href="#"><button type="button" class="btn"  data-toggle="modal" data-target="#myModal"><i class="fa fa-eye fa-lg" ></i></button></a>
+        						<a href="#"><button type="button" class="btn"><i class="fa fa-download fa-lg"></i></button></a>
+        						<a href="#"><button type="button" class="btn"><i class="fa fa-times fa-lg"></i></button></a>
+      						</td>
+      					</tr>
+      					<tr>
+        					<td>2</td>
+        					<td>xyz</td>
+        					<td>18/8/18</td>
+     	   					<td>
+        						<a href="#"><button type="button" class="btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-eye fa-lg" ></i></button></a>
+        						<a href="#"><button type="button" class="btn"><i class="fa fa-download fa-lg"></i></button></a>
+        						<a href="#"><button type="button" class="btn"><i class="fa fa-times fa-lg"></i></button></a>
+     						 </td>
+      					</tr>
+    				</tbody>
+  				</table>
+			</div>
+		</div>
+	</section>
+  	
+  	<section id="3">
+  		<div class="container " style="padding-top: 5%;">
+  			<div class="form-inline" style="padding-top: 22%;padding-left: 34%">
+    			<input type="number" class="form-control" id="pwd" placeholder="Enter Tender No.">
+  				<a href="#3"><button type="submit" class="btn btn-primary" style="margin-left: 10%;background:grey;border-color: grey;" required onclick="myFun()">Search</button></a>
+			 </div>
+		  </div>
+	 </section>
+  <section id="second" class="hidden">
+      <div class="container" style="padding-top: 5%;">
+        <div class="container">
+        <h2 style="text-align: center">Details</h2>
+      <table class="table table-bordered position">
+            <tr>
+              <th>Field</th>
+              <th>Old data</th>
+              <th>Want to edit?</th>
+            </tr>
+            <tr>
+              <td>Form-no.</td>
+              <td>1</td>
+              <td><input type="text" placeholder="Enter new data" style="background-color: inherit;border-color: inherit;"></td>
+            </tr>
+            <tr>
+              <td>Department Name</td>
+              <td>1</td>
+              <td><input type="text" placeholder="Enter new data" style="background-color: inherit;border-color: inherit;"></td>
+            </tr>
+           
+          </table>
+     
+  <button type="submit" class="btn btn-default"  style="margin-left:45%;margin-top:%;background:grey;border-color: grey;" >Save changes</button>
+ </div>
       </div>
-      <div class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Prahar
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Log out</a>
-        </div>
-      </div>
-    </form>
-</div>
-</nav>
-<div class="col-md-3">
-	<div class="row">
-		<div class="vertical-menu">
-			<a href="#" class="new" data-toggle="modal" data-target="#myModal" onclick="myFun()">Dashboard
-  	<ul>
-  		<li>Tender List</li>
-  	</ul>
-  </a>
-   <!--The Modal -->
-  <div class="modal fade" id="myModal">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+  </section>
+	<nav class="navbar navbar-expand-lg  navbar-light bg-light fixed-top" style="left:15%;">
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">		
+    		<ul class="navbar-nav mr-auto">
+        		<li class="nav-item dropdown">
+        			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          			KickStart
+        			</a>
+        				<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          					<a class="dropdown-item" href="#">Visit page</a>
+        				</div>
+      			</li>
+    		</ul>
+    		<form class="form-inline my-2 my-lg-0 bg-">
+      			<div class="nav-item dropdown">
+        			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          			Notification
+        			</a>
+        			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          				<a class="dropdown-item" href="#"><b>Message</b></a>
+        			</div>
+      			</div>
+      			<div class="nav-item dropdown">
+        			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          			Prahar
+        			</a>
+        			<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          				<a class="dropdown-item" href="#">Log out</a>
+        			</div>
+      			</div>
+    		</form>
+		</div>
+	</nav>
+  	
+<!-- The Modal -->
+  	<div class="modal fade" id="myModal">
+    	<div class="modal-dialog modal-dialog-centered">
+      		<div class="modal-content">
       
-  <div class="modal-header">
-  	 <!-- The Modal -->
-  
-          <h4 class="modal-title">Tender List</h4>
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-        </div>
+        <!-- Modal Header -->
+        		<div class="modal-header">
+          			<h4 class="modal-title">Modal Heading</h4>
+          			<button type="button" class="close" data-dismiss="modal">&times;</button>
+        		</div>
         
         <!-- Modal body -->
-        <div class="container">
-		 <h2 style="text-align: center">Details</h2>
-		 <table class="table table-bordered position">
-      		<tr>
-        		<th>Form-no.</th>
-        		<td>hfhfhjghjgjjhjjhjhgh</td>
-      		</tr>
-      		<tr>
-        		<th>Department Name</th>
-        		<td>1</td>
-      		</tr>
-      		<tr>
-        		<th>Name of Work</th>
-        		<td>1</td>
-      		</tr>
-      		<tr>
-        		<th>Estimated contract value (INR)</th>
-        		<td>1</td>
-      		</tr>
-      		<tr>
-        		<th>Bidding Type</th>
-        		<td>1</td>
-      		</tr>
-      		<tr>
-        		<th>Tender Fee</th>
-        		<td>1</td>
-      		</tr>
-      		<tr>
-        		<th>Bid Security/EMD (INR)</th>
-        		<td>1</td>
-      		</tr>
-      		<tr>
-        		<th>Bid Document Downloading Start Date (INR)</th>
-        		<td>1</td>
-      		</tr>
-      		<tr>
-        		<th>Bid Document Downloading End Date (INR)</th>
-        		<td>1</td>
-      		</tr>
-      		<tr>
-        		<th>Pre Bid Meeting</th>
-        		<td>1</td>
-      		</tr>
-      		<tr>
-        		<th>Last Date & Time for Receipt of Bids</th>
-        		<td>1</td>
-      		</tr>
-      		<tr>
-        		<th>Submission of Documents</th>
-        		<td>1</td>
-      		</tr>
-      		<tr>
-        		<th>Bid Operating Date Technical Bid</th>
-        		<td>1</td>
-      		</tr>
-      		<tr>
-        		<th>Bid Operating Date Commercial Bid</th>
-        		<td>1</td>
-      		</tr>
-      	</table>
-    	
-</div>
+        		<div class="modal-body">
+          			<div class="container">
+			 			<h2 style="text-align: center">Details</h2>
+			 			<table class="table table-bordered position">
+				      		<tr>
+				        		<th>Form-no.</th>
+				        		<td>hfhfhjghjgjjhjjhjhgh</td>
+				      		</tr>
+				      		<tr>
+				        		<th>Department Name</th>
+				        		<td>1</td>
+				      		</tr>
+				      		<tr>
+				        		<th>Name of Work</th>
+				        		<td>1</td>
+				      		</tr>
+				      		<tr>
+				        		<th>Estimated contract value (INR)</th>
+				        		<td>1</td>
+				      		</tr>
+				      		<tr>
+				        		<th>Bidding Type</th>
+				        		<td>1</td>
+				      		</tr>
+				      		<tr>
+				        		<th>Tender Fee</th>
+				        		<td>1</td>
+				      		</tr>
+				      		<tr>
+				        		<th>Bid Security/EMD (INR)</th>
+				        		<td>1</td>
+				      		</tr>
+				      		<tr>
+				        		<th>Bid Document Downloading Start Date (INR)</th>
+				        		<td>1</td>
+				      		</tr>
+				      		<tr>
+				        		<th>Bid Document Downloading End Date (INR)</th>
+				        		<td>1</td>
+				      		</tr>
+				      		<tr>
+				        		<th>Pre Bid Meeting</th>
+				        		<td>1</td>
+				      		</tr>
+				      		<tr>
+				        		<th>Last Date & Time for Receipt of Bids</th>
+				        		<td>1</td>
+				      		</tr>
+				      		<tr>
+				        		<th>Submission of Documents</th>
+				        		<td>1</td>
+				      		</tr>
+				      		<tr>
+				        		<th>Bid Operating Date Technical Bid</th>
+				        		<td>1</td>
+				      		</tr>
+				      		<tr>
+				        		<th>Bid Operating Date Commercial Bid</th>
+				        		<td>1</td>
+				      		</tr>
+				      	</table>
+		    		</div>
+		    	</div>
         
         <!-- Modal footer -->
-        <div class="modal-footer">
-         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-    </div>
-</div>
-</div>
- 
-  			<a href="#" class="new">New
-  				<ul>
-  					<li>Tender</li>
-  					<li>Documents</li>
-  				</ul>
-  			</a>
-  			
-  
-    <a href="#" class="new">Edit Tender</a>
-</div>
-
-</div>
-</div>
+        		<div class="modal-footer">
+          			<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        		</div>
+        
+      		</div>
+    	</div>
+  	</div>
 </body>
 </html>

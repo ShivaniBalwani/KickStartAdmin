@@ -5,3 +5,8 @@ $(document).ready(function () {
     });
 
 });
+function myFun()
+{
+	$("#second").removeClass("hidden");
+	$("#3").addClass("hidden");
+}
