@@ -35,3 +35,6 @@ ul{
 .vertical-menu li a{
     color: #d3d3d3!important;
 }
+.nav-link .active{
+    background-color: blue;
+}
