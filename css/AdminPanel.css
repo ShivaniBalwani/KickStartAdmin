@@ -6,21 +6,12 @@
     background-color: #19212B;
 }
 
-/*.new {
+.new {
     background-color: #141111;
     color: #dcede6;
     display: list-item;
     padding: 10px;
     text-decoration: none;
-<<<<<<< HEAD
-}*/
-
-.vertical-menu a:hover {
-    background-color:#141111;
-    color:#0099ff;
-
-=======
->>>>>>> d0a2ab05e8aa0d9f3342257382680c4c44c5b184
 }
 .hidden
 {
@@ -53,16 +44,6 @@ ul{
     transition: all 0.5s;
     z-index: 2;
 }
-<<<<<<< HEAD
-.vertical-menu li .active{
-    background-color: blue;
-}
-body{
-     background-image: url("../images/back.jpg");
-     background-repeat: no-repeat;
-     background-size: cover;
-}
-=======
 
 .vertical-menu .sub-menu a:hover,.main-menu{
     background-color: #2B323C;
@@ -75,4 +56,3 @@ body{
 -moz-box-shadow: inset 0px 0px 2px 0px #BCBFC2;
 -webkit-box-shadow: inset 0px 0px 2px 0px #BCBFC2;
 }
->>>>>>> d0a2ab05e8aa0d9f3342257382680c4c44c5b184
