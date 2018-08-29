@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/AdminPanel.css">
-	<link rel="stylesheet" type="text/css" href="css/font/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
   	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
@@ -17,46 +17,57 @@
   </style>
 </head>
 <body>
-  <ul id="accordion1" class="nav nav-pills flex-column vertical-menu navbar-dark bg-dark" style="top:0%;">
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="collapse" href="#item-1" data-parent="#accordion1">Dashboard</a>
-    <div id="item-1" class="collapse show">
-      <ul class="nav flex-column ml-3">
+  <ul id="accordion1" class="nav nav-pills flex-column vertical-menu navbar-dark" style="top:0%;">
+  <li class="nav-item main-menu">
+    <a class="nav-link header" data-toggle="collapse" href="#item-1" data-parent="#accordion1">Dashboard</a>
+    <div id="item-1" class="collapse">
+      <ul class="nav flex-column ml-3 sub-menu">
         <li class="nav-item">
-          <a class="nav-link active" href="#1">TenderList</a>
+          <a class="nav-link" href="#1"><i class="fa fa-list"></i>&nbsp;&nbsp;TenderList</a>
         </li>
       </ul>
     </div>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="collapse" href="#item-2" data-parent="#accordion1">Upload</a>
+  <li class="nav-item main-menu">
+    <a class="nav-link header" data-toggle="collapse" href="#item-2" data-parent="#accordion1">Upload</a>
     <div id="item-2" class="collapse">
-      <ul class="nav flex-column ml-3">
+      <ul class="nav flex-column ml-3 sub-menu">
         <li class="nav-item">
-          <a class="nav-link" href="#">New Tender</a>
+          <a class="nav-link" href="#"><i class="fa fa-upload"></i>&nbsp;&nbsp;New Tender</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Documents</a>
+          <a class="nav-link" href="#"><i class="fa fa-file-upload"></i>&nbsp;&nbsp;&nbsp;Documents</a>
         </li>
       </ul>
     </div>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" data-toggle="collapse" href="#item-3" data-parent="#accordion1">Modify</a>
+  <li class="nav-item main-menu">
+    <a class="nav-link header" data-toggle="collapse" href="#item-3" data-parent="#accordion1">Modify</a>
     <div id="item-3" class="collapse">
-      <ul class="nav flex-column ml-3">
+      <ul class="nav flex-column ml-3 sub-menu">
         <li class="nav-item">
-          <a class="nav-link" href="#3">Edit Tender</a>
+          <a class="nav-link" href="#3"><i class="fa fa-list"></i>&nbsp;&nbsp;Edit Tender</a>
         </li>
       </ul>
     </div>
   </li>
 </ul>
 <script type="text/javascript">
-  $(".nav a").on("click", function(){
-   $(".nav").find(".active").removeClass("active");
-   $(this).parent().addClass("active");
-});
+  $(document).ready(function(){
+    $('.collapse').on('show.bs.collapse', function () {
+      $(this).parent().css({ 'background-color' : '#19212B'});
+    });
+    $('.collapse').on('hidden.bs.collapse', function () {
+      $(this).parent().css({ 'background-color' : '#2B323C'});
+    });
+
+    $(".sub-menu a").on("click", function(){
+     $(".nav").find(".active").removeClass("active");
+     $(this).parent().addClass("active");
+    });
+    $('.collapse').first().collapse();
+    
+  });
 </script>
   	<section id="1">
   		<div class="container" style="padding-top: 5%;">
