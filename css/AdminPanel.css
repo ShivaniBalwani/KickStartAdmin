@@ -5,13 +5,13 @@
     top:8%;
 }
 
-.new {
+/*.new {
     background-color: #141111;
     color: #dcede6;
     display: list-item;
     padding: 10px;
     text-decoration: none;
-}
+}*/
 
 .vertical-menu a:hover {
     background-color:#141111;
@@ -35,6 +35,11 @@ ul{
 .vertical-menu li a{
     color: #d3d3d3!important;
 }
-.nav-link .active{
+.vertical-menu li .active{
     background-color: blue;
+}
+body{
+     background-image: url("../images/back.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
 }
